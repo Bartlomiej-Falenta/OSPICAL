@@ -5,5 +5,15 @@ The idea for component came from noticing that to achieve all-optical computing 
  - Optical Kerr Effect, in this case, requiring VERY high nonlinearities achieved with properly combined materials), which introduces functions like switching, modulation, and „clean-up” of a signal;
  - Stimulated Raman Scattering (Brillouin's can be used as well – both SRS abd SBS need special, possibly organic materials), which actually amplifies the signal, with possibility of amplification by few orders of magnitude (though we aim at about 50 to 500);
  - Mach-Zehnder Interferometer (in this specific case, Mach Zehnder Modulator) which converts OKE phase shifts to amplitude shift.
+So, its layout would look something like:
+```
+              ┏━━━━━━━━━━━┓
+Signal        ┃           ┃
+  +           ┃     ┌───[NOKE -phi]───┐
+Pump ──[SRS gain]───┤     ┃           ├── Output
+              ┃     └───[POKE +phi]───┘
+              ┃           ┃
+ Control_IN ━━┛           ┗━━━━━━ Control_OUT
+```
 
  [TO DO] : Possible material choices, formulas, diagrams, simulation scripts and example results.
